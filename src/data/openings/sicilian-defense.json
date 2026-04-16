@@ -1,0 +1,94 @@
+{
+  "id": "sicilian-defense",
+  "name": "Sicilian Defense",
+  "eco": "B20-B99",
+  "description": "The most popular response to 1.e4 at the top level. Black creates an asymmetric position and fights for counterplay from the start.",
+  "variations": [
+    {
+      "id": "najdorf",
+      "name": "Najdorf Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening." },
+        { "san": "c5", "commentary": "The Sicilian Defense — Black fights for the center asymmetrically. Creates imbalance from move one." },
+        { "san": "Nf3", "commentary": "Develops the knight and prepares to open the center." },
+        { "san": "d6", "commentary": "Supports e5 and keeps options open for the knight development." },
+        { "san": "d4", "commentary": "Opens the center. White gives up the d-pawn to gain a lead in development." },
+        { "san": "cxd4", "commentary": "Black captures, accepting the open c-file for future counterplay." },
+        { "san": "Nxd4", "commentary": "Recaptures with the knight, centralized and powerful." },
+        { "san": "Nf6", "commentary": "Attacks e4 while developing." },
+        { "san": "Nc3", "commentary": "Defends e4 and develops the last minor piece." },
+        { "san": "a6", "commentary": "The Najdorf! Prepares b5 expansion and prevents Bb5 pins. Fischer's weapon of choice." },
+        { "san": "Be2", "commentary": "A solid, classical approach. Develops the bishop before committing to an aggressive plan." },
+        { "san": "e5", "commentary": "Black stakes out space in the center and kicks the knight." },
+        { "san": "Nb3", "commentary": "The knight retreats. From b3 it supports d4 and controls c5." },
+        { "san": "Be7", "commentary": "Develops and prepares to castle. Black has a flexible, fighting position." }
+      ]
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c5", "commentary": "Sicilian Defense." },
+        { "san": "Nf3", "commentary": "Develops and prepares d4." },
+        { "san": "d6", "commentary": "Supports a future e5 or prepares Nf6." },
+        { "san": "d4", "commentary": "Opens the center." },
+        { "san": "cxd4", "commentary": "Captures." },
+        { "san": "Nxd4", "commentary": "Centralizes the knight." },
+        { "san": "Nf6", "commentary": "Attacks e4." },
+        { "san": "Nc3", "commentary": "Defends e4." },
+        { "san": "g6", "commentary": "The Dragon! Black fianchettoes the bishop to g7, creating a 'dragon' formation. One of the sharpest openings in chess." },
+        { "san": "Be3", "commentary": "Develops and prepares Qd2 for the Yugoslav Attack." },
+        { "san": "Bg7", "commentary": "The dragon bishop — aims along the long diagonal toward White's queenside." },
+        { "san": "f3", "commentary": "Supports e4 and prepares Qd2 + O-O-O. The Yugoslav Attack is the most critical test of the Dragon." },
+        { "san": "O-O", "commentary": "Black castles into the storm. Both sides will launch opposite-side attacks." },
+        { "san": "Qd2", "commentary": "Connects the rooks and prepares O-O-O + Bh6 to trade off the dragon bishop." },
+        { "san": "Nc6", "commentary": "Develops and pressures d4. A razor-sharp battle ahead with mutual attacks." }
+      ]
+    },
+    {
+      "id": "scheveningen",
+      "name": "Scheveningen Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c5", "commentary": "Sicilian." },
+        { "san": "Nf3", "commentary": "Develops." },
+        { "san": "d6", "commentary": "Flexible setup." },
+        { "san": "d4", "commentary": "Opens the center." },
+        { "san": "cxd4", "commentary": "Captures." },
+        { "san": "Nxd4", "commentary": "Recaptures." },
+        { "san": "Nf6", "commentary": "Attacks e4." },
+        { "san": "Nc3", "commentary": "Defends." },
+        { "san": "e6", "commentary": "The Scheveningen — Black sets up a small pawn center with d6+e6. Flexible but slightly passive. Kasparov's favorite structure." },
+        { "san": "Be2", "commentary": "Classical development. White keeps options open between kingside and queenside strategies." },
+        { "san": "Be7", "commentary": "Black develops smoothly, preparing to castle." },
+        { "san": "O-O", "commentary": "White castles and prepares the middlegame plan." },
+        { "san": "O-O", "commentary": "Both sides castled kingside. A rich strategic battle ahead." },
+        { "san": "f4", "commentary": "White gains space on the kingside. Typical Scheveningen plan — pressure along the f-file." },
+        { "san": "Nc6", "commentary": "Develops the last minor piece and pressures the central knight." }
+      ]
+    },
+    {
+      "id": "classical-sicilian",
+      "name": "Classical Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c5", "commentary": "Sicilian Defense." },
+        { "san": "Nf3", "commentary": "Develops." },
+        { "san": "d6", "commentary": "Flexible." },
+        { "san": "d4", "commentary": "Opens center." },
+        { "san": "cxd4", "commentary": "Captures." },
+        { "san": "Nxd4", "commentary": "Recaptures." },
+        { "san": "Nf6", "commentary": "Attacks e4." },
+        { "san": "Nc3", "commentary": "Defends e4." },
+        { "san": "Nc6", "commentary": "The Classical Sicilian — develops the knight immediately rather than choosing a6, g6, or e6. Direct and logical." },
+        { "san": "Be2", "commentary": "Solid development. White prepares to castle before committing to an attack plan." },
+        { "san": "e5", "commentary": "Black strikes the center, gaining space and challenging the d4 knight." },
+        { "san": "Nb3", "commentary": "Retreats to b3, maintaining control of d4 from a distance." },
+        { "san": "Be7", "commentary": "Develops the bishop and prepares to castle. A typical Classical setup." },
+        { "san": "O-O", "commentary": "White castles. Plans include f4 or Be3 + Nd5." },
+        { "san": "O-O", "commentary": "Black castles. A balanced middlegame with chances for both sides." }
+      ]
+    }
+  ]
+}

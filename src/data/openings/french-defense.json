@@ -1,0 +1,90 @@
+{
+  "id": "french-defense",
+  "name": "French Defense",
+  "eco": "C00-C19",
+  "description": "A solid, strategic defense where Black builds a pawn chain and fights for counterplay against White's center. Known for its closed, positional character.",
+  "variations": [
+    {
+      "id": "winawer",
+      "name": "Winawer Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening." },
+        { "san": "e6", "commentary": "The French Defense — Black prepares d5, building a solid pawn chain." },
+        { "san": "d4", "commentary": "White claims the full center with two pawns." },
+        { "san": "d5", "commentary": "Challenges e4 directly. The tension d5 vs e4 defines the French." },
+        { "san": "Nc3", "commentary": "Defends e4 and develops the knight." },
+        { "san": "Bb4", "commentary": "The Winawer! Pins the knight and puts immediate pressure on e4. The most dynamic French variation." },
+        { "san": "e5", "commentary": "White advances, gaining space but creating a fixed pawn chain. The center closes." },
+        { "san": "c5", "commentary": "Black attacks the base of White's chain at d4. Classic French strategy — undermine the chain." },
+        { "san": "a3", "commentary": "Forces the bishop to declare its intentions. Will it capture or retreat?" },
+        { "san": "Bxc3+", "commentary": "Black gives up the bishop pair for structural damage. White gets doubled pawns." },
+        { "san": "bxc3", "commentary": "Recaptures. White has the bishop pair but a shattered queenside pawn structure." },
+        { "san": "Ne7", "commentary": "Develops the knight behind the pawn chain, heading for f5 or g6." },
+        { "san": "Qg4", "commentary": "White aggressively targets g7, exploiting Black's dark-square weakness." },
+        { "san": "Qc7", "commentary": "Defends g7 while putting pressure on the e5 pawn. Typical Winawer counterplay." }
+      ]
+    },
+    {
+      "id": "classical-french",
+      "name": "Classical Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "e6", "commentary": "French Defense setup." },
+        { "san": "d4", "commentary": "Full center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "Nc3", "commentary": "Defends e4." },
+        { "san": "Nf6", "commentary": "The Classical French — develops the knight and maintains pressure on e4. More traditional than the Winawer." },
+        { "san": "Bg5", "commentary": "Pins the knight! Creates the classic dilemma — if Black plays Be7, White exchanges and weakens the kingside pawns." },
+        { "san": "Be7", "commentary": "Unpins the knight. After the exchange on f6, Black will decide between structural integrity and activity." },
+        { "san": "e5", "commentary": "Advances and gains space. The knight on f6 is driven back." },
+        { "san": "Nfd7", "commentary": "The knight retreats, keeping the option to pressure e5 from c5 or f6 later." },
+        { "san": "Bxe7", "commentary": "White exchanges, eliminating the defender of the dark squares." },
+        { "san": "Qxe7", "commentary": "Recaptures with the queen, maintaining flexibility." },
+        { "san": "f4", "commentary": "Supports the e5 pawn and gains kingside space. White aims for a gradual kingside attack." },
+        { "san": "O-O", "commentary": "Black castles and prepares the typical c5 break and queenside play." },
+        { "san": "Nf3", "commentary": "Develops the last knight. White has space; Black has a solid position and counterplay targets." }
+      ]
+    },
+    {
+      "id": "tarrasch",
+      "name": "Tarrasch Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "e6", "commentary": "French Defense." },
+        { "san": "d4", "commentary": "Claims the center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "Nd2", "commentary": "The Tarrasch! Defends e4 without blocking the c-pawn. Avoids the Winawer pin but develops more passively." },
+        { "san": "Nf6", "commentary": "Develops and attacks e4." },
+        { "san": "e5", "commentary": "Advances, gaining space and driving back the knight." },
+        { "san": "Nfd7", "commentary": "Knight retreats, preparing c5 to attack the pawn chain." },
+        { "san": "Bd3", "commentary": "Develops the bishop to its best square, eyeing the kingside." },
+        { "san": "c5", "commentary": "The classic French break — attacks the base of White's pawn chain." },
+        { "san": "c3", "commentary": "Supports d4. White wants to maintain the chain." },
+        { "san": "Nc6", "commentary": "Develops and pressures d4 further." },
+        { "san": "Ne2", "commentary": "Develops the knight without blocking the bishop. Prepares to support the center." },
+        { "san": "cxd4", "commentary": "Black opens lines and challenges White's structure." },
+        { "san": "cxd4", "commentary": "Recaptures, maintaining the pawn chain. A typical French middlegame." }
+      ]
+    },
+    {
+      "id": "advance-french",
+      "name": "Advance Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "e6", "commentary": "French Defense." },
+        { "san": "d4", "commentary": "Full center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "e5", "commentary": "The Advance Variation — White pushes immediately, gaining space but fixing the pawn structure early." },
+        { "san": "c5", "commentary": "Attacks the base of the pawn chain. Fundamental French strategy." },
+        { "san": "c3", "commentary": "Supports d4 solidly. White builds a strong but rigid center." },
+        { "san": "Nc6", "commentary": "Develops and pressures d4." },
+        { "san": "Nf3", "commentary": "Develops the knight and supports d4." },
+        { "san": "Qb6", "commentary": "Puts pressure on both b2 and d4. A common idea in the Advance French." },
+        { "san": "Be2", "commentary": "Develops solidly, preparing to castle." },
+        { "san": "Nh6", "commentary": "An unusual-looking move but the knight heads to f5 to pressure d4 and e3." },
+        { "san": "Bxh6", "commentary": "White trades to prevent the knight reaching f5." },
+        { "san": "gxh6", "commentary": "Black accepts doubled pawns but gains the open g-file for attacking chances." }
+      ]
+    }
+  ]
+}

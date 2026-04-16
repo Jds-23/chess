@@ -1,0 +1,90 @@
+{
+  "id": "italian-game",
+  "name": "Italian Game",
+  "eco": "C50-C54",
+  "description": "One of the oldest openings in chess. White develops the bishop to c4, targeting the vulnerable f7 square and fighting for center control.",
+  "variations": [
+    {
+      "id": "giuoco-piano",
+      "name": "Giuoco Piano",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening — claims the center and opens diagonals for the bishop and queen." },
+        { "san": "e5", "commentary": "Black mirrors the center occupation, leading to an open game." },
+        { "san": "Nf3", "commentary": "Develops the knight to its best square, attacking the e5 pawn." },
+        { "san": "Nc6", "commentary": "Defends e5 with the knight while developing toward the center." },
+        { "san": "Bc4", "commentary": "The Italian Bishop — targets f7, the weakest square in Black's position." },
+        { "san": "Bc5", "commentary": "Black mirrors, placing the bishop on an active diagonal aiming at f2." },
+        { "san": "c3", "commentary": "Prepares d4 to build a strong pawn center. The quiet approach — Giuoco Piano means 'quiet game'." },
+        { "san": "Nf6", "commentary": "Develops the knight and counterattacks the e4 pawn." },
+        { "san": "d4", "commentary": "Strikes the center as planned. White aims for a classical pawn duo on d4+e4." },
+        { "san": "exd4", "commentary": "Black captures to challenge White's center and open lines." },
+        { "san": "cxd4", "commentary": "Recaptures with the pawn, establishing the ideal e4+d4 center." },
+        { "san": "Bb4+", "commentary": "Black checks and forces White to deal with the pin before developing further." },
+        { "san": "Bd2", "commentary": "Blocks the check while developing. After the exchange, White will have a strong center." },
+        { "san": "Bxd2+", "commentary": "Black exchanges to simplify and reduce White's attacking potential." },
+        { "san": "Nbxd2", "commentary": "Recaptures with the knight, keeping pieces active and maintaining the center." }
+      ]
+    },
+    {
+      "id": "evans-gambit",
+      "name": "Evans Gambit",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening — claims the center and opens diagonals." },
+        { "san": "e5", "commentary": "Black occupies the center symmetrically." },
+        { "san": "Nf3", "commentary": "Develops and attacks e5." },
+        { "san": "Nc6", "commentary": "Defends e5 with the knight." },
+        { "san": "Bc4", "commentary": "The Italian Bishop targets f7." },
+        { "san": "Bc5", "commentary": "Black develops actively on the same diagonal." },
+        { "san": "b4", "commentary": "The Evans Gambit! Sacrifices a pawn to deflect the bishop and gain time for a powerful center." },
+        { "san": "Bxb4", "commentary": "Black accepts the gambit. Declining with Bb6 is also playable but less common." },
+        { "san": "c3", "commentary": "Attacks the bishop and prepares d4. White aims for rapid central expansion." },
+        { "san": "Ba5", "commentary": "Retreats to a5 keeping pressure on the c3-pawn and eyeing the kingside." },
+        { "san": "d4", "commentary": "White builds the ideal pawn center. The gambit pawn is well invested." },
+        { "san": "exd4", "commentary": "Black captures, opening the center." },
+        { "san": "O-O", "commentary": "White castles before recapturing. Development and king safety take priority over material." },
+        { "san": "d3", "commentary": "Black returns the pawn to block White's development and slow the attack." },
+        { "san": "Qb3", "commentary": "Puts pressure on f7 and d3. White has excellent compensation with active pieces and open lines." }
+      ]
+    },
+    {
+      "id": "two-knights-defense",
+      "name": "Two Knights Defense",
+      "moves": [
+        { "san": "e4", "commentary": "Claims the center with the king's pawn." },
+        { "san": "e5", "commentary": "Black mirrors the central occupation." },
+        { "san": "Nf3", "commentary": "Develops and attacks e5." },
+        { "san": "Nc6", "commentary": "Defends e5 naturally." },
+        { "san": "Bc4", "commentary": "Italian Bishop — aims at f7." },
+        { "san": "Nf6", "commentary": "The Two Knights Defense! Instead of Bc5, Black counterattacks e4 immediately. More aggressive than the Giuoco Piano." },
+        { "san": "Ng5", "commentary": "The Fried Liver Attack direction — White doubles up on f7 with the bishop and knight." },
+        { "san": "d5", "commentary": "The only good defense! Black counterattacks in the center rather than passively defending f7." },
+        { "san": "exd5", "commentary": "Captures the pawn, opening the position." },
+        { "san": "Na5", "commentary": "The main line — Black chases the bishop while ignoring the d5 pawn. Counterattack over defense." },
+        { "san": "Bb5+", "commentary": "Checks the king to gain a tempo. White wants to hold the extra d5 pawn." },
+        { "san": "c6", "commentary": "Blocks the check and attacks the bishop, gaining time to recapture on d5." },
+        { "san": "dxc6", "commentary": "White opens lines, counting on the lead in development." },
+        { "san": "bxc6", "commentary": "Recaptures, opening the b-file for the rook. Black has compensation with active piece play." },
+        { "san": "Be2", "commentary": "White retreats the bishop to safety. A sharp, double-edged middlegame lies ahead." }
+      ]
+    },
+    {
+      "id": "hungarian-defense",
+      "name": "Hungarian Defense",
+      "moves": [
+        { "san": "e4", "commentary": "Opens with the king's pawn." },
+        { "san": "e5", "commentary": "Black responds symmetrically." },
+        { "san": "Nf3", "commentary": "Develops the knight toward the center." },
+        { "san": "Nc6", "commentary": "Defends e5." },
+        { "san": "Bc4", "commentary": "Italian Bishop setup." },
+        { "san": "Be7", "commentary": "The Hungarian Defense — a solid but passive choice. Black avoids tactical complications of Bc5 or Nf6." },
+        { "san": "d4", "commentary": "White takes advantage of Black's passive setup to seize space immediately." },
+        { "san": "d6", "commentary": "Supports e5 and prepares to develop the light-squared bishop." },
+        { "san": "dxe5", "commentary": "Opens the position while Black's pieces are still undeveloped." },
+        { "san": "dxe5", "commentary": "Black recaptures, but the position is now more open than Black wanted." },
+        { "san": "Qxd8+", "commentary": "Exchanging queens early. In this structure, White's development advantage matters more than the queen." },
+        { "san": "Bxd8", "commentary": "Black recaptures. The bishop is awkwardly placed on d8." },
+        { "san": "Nc3", "commentary": "White develops with a clear advantage in piece activity. The plan is Bf4 or Be3 with easy development." }
+      ]
+    }
+  ]
+}

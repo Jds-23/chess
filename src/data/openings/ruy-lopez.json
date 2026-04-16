@@ -1,0 +1,97 @@
+{
+  "id": "ruy-lopez",
+  "name": "Ruy Lopez",
+  "eco": "C60-C99",
+  "description": "The Spanish Opening. One of the most deeply analyzed openings, where White pressures Black's center by targeting the knight defending e5.",
+  "variations": [
+    {
+      "id": "morphy-defense",
+      "name": "Morphy Defense",
+      "moves": [
+        { "san": "e4", "commentary": "Opens with the king's pawn." },
+        { "san": "e5", "commentary": "Black mirrors the center." },
+        { "san": "Nf3", "commentary": "Develops and attacks e5." },
+        { "san": "Nc6", "commentary": "Defends e5 with the knight." },
+        { "san": "Bb5", "commentary": "The Ruy Lopez! Pins the knight that defends e5, creating indirect pressure on the center." },
+        { "san": "a6", "commentary": "The Morphy Defense — asks the bishop 'where will you go?' Forces White to commit." },
+        { "san": "Ba4", "commentary": "Maintains the pin. Retreating keeps tension and avoids giving up the bishop pair." },
+        { "san": "Nf6", "commentary": "Counterattacks e4 while developing the kingside knight." },
+        { "san": "O-O", "commentary": "Castles, connecting rooks and preparing Re1 to support e4." },
+        { "san": "Be7", "commentary": "Develops and prepares to castle. A solid, classical approach." },
+        { "san": "Re1", "commentary": "Reinforces e4 and frees the f1 square for the bishop if needed." },
+        { "san": "b5", "commentary": "Pushes the bishop away and gains space on the queenside." },
+        { "san": "Bb3", "commentary": "The bishop retreats to a strong diagonal, still eyeing f7." }
+      ]
+    },
+    {
+      "id": "berlin-defense",
+      "name": "Berlin Defense",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening." },
+        { "san": "e5", "commentary": "Symmetrical center." },
+        { "san": "Nf3", "commentary": "Attacks e5." },
+        { "san": "Nc6", "commentary": "Defends e5." },
+        { "san": "Bb5", "commentary": "The Ruy Lopez bishop." },
+        { "san": "Nf6", "commentary": "The Berlin Defense — counterattacks e4 instead of playing a6. Known as the 'Berlin Wall' for its solidity." },
+        { "san": "O-O", "commentary": "Castles, inviting Black to capture on e4." },
+        { "san": "Nxe4", "commentary": "Black takes the pawn. This leads to the famous Berlin endgame." },
+        { "san": "d4", "commentary": "Opens the center to exploit Black's knight on e4." },
+        { "san": "Nd6", "commentary": "The knight retreats, hitting the bishop on b5." },
+        { "san": "Bxc6", "commentary": "Captures the knight, damaging Black's pawn structure." },
+        { "san": "dxc6", "commentary": "Recaptures, doubled pawns but gains the bishop pair." },
+        { "san": "dxe5", "commentary": "Wins back the pawn, opening the position." },
+        { "san": "Nf5", "commentary": "The knight leaps to an active post, eyeing g3 and d4." },
+        { "san": "Qxd8+", "commentary": "The Berlin endgame begins. Despite no queens, the position remains complex and strategically rich." },
+        { "san": "Kxd8", "commentary": "Black loses castling rights but the king is actually safe in the center in this structure." }
+      ]
+    },
+    {
+      "id": "marshall-attack",
+      "name": "Marshall Attack",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "e5", "commentary": "Symmetric center." },
+        { "san": "Nf3", "commentary": "Develops and attacks." },
+        { "san": "Nc6", "commentary": "Defends e5." },
+        { "san": "Bb5", "commentary": "Ruy Lopez." },
+        { "san": "a6", "commentary": "Morphy Defense." },
+        { "san": "Ba4", "commentary": "Maintains the pin." },
+        { "san": "Nf6", "commentary": "Counterattacks e4." },
+        { "san": "O-O", "commentary": "Castles." },
+        { "san": "Be7", "commentary": "Prepares kingside castling." },
+        { "san": "Re1", "commentary": "Supports e4." },
+        { "san": "b5", "commentary": "Gains space, drives the bishop back." },
+        { "san": "Bb3", "commentary": "Bishop retreats to strong diagonal." },
+        { "san": "O-O", "commentary": "Black castles." },
+        { "san": "c3", "commentary": "Prepares d4 to expand in the center." },
+        { "san": "d5", "commentary": "The Marshall Attack! Black sacrifices a pawn for a fierce kingside attack. One of the most famous gambits in chess history." },
+        { "san": "exd5", "commentary": "White accepts. Declining with d3 avoids the storm but gives Black easy equality." },
+        { "san": "Nxd5", "commentary": "Recaptures with the knight, aiming to reroute it to f4 or e3 for the attack." }
+      ]
+    },
+    {
+      "id": "closed-ruy-lopez",
+      "name": "Closed Ruy Lopez",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening." },
+        { "san": "e5", "commentary": "Symmetrical center." },
+        { "san": "Nf3", "commentary": "Develops and attacks e5." },
+        { "san": "Nc6", "commentary": "Defends." },
+        { "san": "Bb5", "commentary": "Ruy Lopez." },
+        { "san": "a6", "commentary": "Morphy Defense." },
+        { "san": "Ba4", "commentary": "Maintains tension." },
+        { "san": "Nf6", "commentary": "Counterattacks e4." },
+        { "san": "O-O", "commentary": "Castles." },
+        { "san": "Be7", "commentary": "Develops the bishop." },
+        { "san": "Re1", "commentary": "Supports e4." },
+        { "san": "b5", "commentary": "Gains queenside space." },
+        { "san": "Bb3", "commentary": "Bishop to strong diagonal." },
+        { "san": "d6", "commentary": "The Closed Ruy Lopez — Black keeps the center locked. A slower, strategic battle compared to the Marshall." },
+        { "san": "c3", "commentary": "Prepares d4. White builds up slowly, aiming for a central break." },
+        { "san": "O-O", "commentary": "Black castles, completing kingside development." },
+        { "san": "h3", "commentary": "Prevents Bg4 pin. A key prophylactic move in the Closed Ruy Lopez." },
+        { "san": "Nb8", "commentary": "The Breyer maneuver — the knight retreats to reroute to d7, supporting a future d5 break." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "caro-kann",
+  "name": "Caro-Kann Defense",
+  "eco": "B10-B19",
+  "description": "A solid, reliable defense against 1.e4. Black prepares d5 without locking in the light-squared bishop, avoiding the main drawback of the French Defense.",
+  "variations": [
+    {
+      "id": "classical-caro-kann",
+      "name": "Classical Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn opening." },
+        { "san": "c6", "commentary": "The Caro-Kann — prepares d5 while keeping the light-squared bishop free to develop. Solid and reliable." },
+        { "san": "d4", "commentary": "White claims the center with two pawns." },
+        { "san": "d5", "commentary": "Challenges e4. Unlike the French, the bishop on c8 isn't blocked." },
+        { "san": "Nc3", "commentary": "Defends e4 with the knight." },
+        { "san": "dxe4", "commentary": "Black captures, relieving the central tension." },
+        { "san": "Nxe4", "commentary": "Recaptures with the knight. White has a strong centralized piece." },
+        { "san": "Bf5", "commentary": "The Classical — develops the bishop outside the pawn chain immediately. This is why Black played c6 instead of e6." },
+        { "san": "Ng3", "commentary": "Attacks the bishop, forcing it to decide." },
+        { "san": "Bg6", "commentary": "Retreats to g6, maintaining the bishop on a decent diagonal." },
+        { "san": "h4", "commentary": "Gains space on the kingside and threatens h5 to trap the bishop." },
+        { "san": "h6", "commentary": "Prevents h5 and gives the bishop an escape route on h7." },
+        { "san": "Nf3", "commentary": "Develops the second knight. White has a pleasant space advantage." },
+        { "san": "Nd7", "commentary": "Develops the knight to d7, preparing Ngf6 and e6 for a solid setup." },
+        { "san": "Bd3", "commentary": "Offers to trade the light-squared bishops. White aims for a clear development advantage." }
+      ]
+    },
+    {
+      "id": "advance-caro-kann",
+      "name": "Advance Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c6", "commentary": "Caro-Kann." },
+        { "san": "d4", "commentary": "Full center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "e5", "commentary": "The Advance — White pushes forward, gaining space but committing the pawn structure early." },
+        { "san": "Bf5", "commentary": "Develops the bishop outside the chain before playing e6. Key Caro-Kann idea." },
+        { "san": "Nf3", "commentary": "Develops and supports the center." },
+        { "san": "e6", "commentary": "Solidifies the pawn chain and prepares to break with c5." },
+        { "san": "Be2", "commentary": "Develops and prepares to castle." },
+        { "san": "c5", "commentary": "Attacks the base of White's pawn chain — the standard break." },
+        { "san": "Be3", "commentary": "Develops and supports d4." },
+        { "san": "Nd7", "commentary": "Develops toward c5 or supports a future f6 break against e5." },
+        { "san": "O-O", "commentary": "White castles, completing development." },
+        { "san": "Ne7", "commentary": "Develops the knight with flexibility — can go to f5, g6, or c6." }
+      ]
+    },
+    {
+      "id": "exchange-caro-kann",
+      "name": "Exchange Variation",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c6", "commentary": "Caro-Kann." },
+        { "san": "d4", "commentary": "Full center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "exd5", "commentary": "The Exchange — White simplifies the center. Considered less ambitious but leads to clear plans." },
+        { "san": "cxd5", "commentary": "Recaptures, opening the c-file. The position is symmetrical but White has a slight initiative." },
+        { "san": "Bd3", "commentary": "Develops the bishop actively, targeting the kingside." },
+        { "san": "Nc6", "commentary": "Develops and pressures d4." },
+        { "san": "c3", "commentary": "Supports d4 and prevents Nb4 attacking the bishop." },
+        { "san": "Nf6", "commentary": "Develops and controls the center." },
+        { "san": "Bf4", "commentary": "Develops outside the pawn chain. White aims for a minority attack on the queenside." },
+        { "san": "Bg4", "commentary": "Pins the knight on f3 (once it develops) and develops actively." },
+        { "san": "Qb3", "commentary": "Attacks b7 and d5. White tries to exploit the slightly open position." },
+        { "san": "Qd7", "commentary": "Defends b7 and connects the rooks. A solid response." }
+      ]
+    },
+    {
+      "id": "panov-botvinnik",
+      "name": "Panov-Botvinnik Attack",
+      "moves": [
+        { "san": "e4", "commentary": "King's pawn." },
+        { "san": "c6", "commentary": "Caro-Kann." },
+        { "san": "d4", "commentary": "Full center." },
+        { "san": "d5", "commentary": "Challenges e4." },
+        { "san": "exd5", "commentary": "Exchanges." },
+        { "san": "cxd5", "commentary": "Recaptures with the c-pawn." },
+        { "san": "c4", "commentary": "The Panov-Botvinnik! Immediately attacks Black's d5 pawn. Transforms into an IQP (Isolated Queen Pawn) position." },
+        { "san": "Nf6", "commentary": "Develops and defends d5." },
+        { "san": "Nc3", "commentary": "Develops and attacks d5 again." },
+        { "san": "e6", "commentary": "Solidifies d5 and opens a line for the bishop." },
+        { "san": "Nf3", "commentary": "Develops the last minor piece." },
+        { "san": "Be7", "commentary": "Develops and prepares to castle." },
+        { "san": "cxd5", "commentary": "Creates the IQP on d4. White gets active piece play; Black targets the isolated pawn." },
+        { "san": "Nxd5", "commentary": "Recaptures with the knight, occupying a strong central post." },
+        { "san": "Bd3", "commentary": "Develops and aims at the kingside. Typical IQP play — White attacks, Black blockades." }
+      ]
+    }
+  ]
+}
