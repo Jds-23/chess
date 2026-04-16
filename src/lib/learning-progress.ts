@@ -23,6 +23,7 @@ function defaultProgress(): LearningProgress {
 }
 
 export function loadProgress(): LearningProgress {
+  if (typeof window === 'undefined') return defaultProgress()
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return defaultProgress()
@@ -33,6 +34,7 @@ export function loadProgress(): LearningProgress {
 }
 
 export function saveProgress(progress: LearningProgress): void {
+  if (typeof window === 'undefined') return
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
 }
 

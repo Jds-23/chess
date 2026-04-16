@@ -28,6 +28,13 @@ export default function Header() {
             Analyze
           </Link>
           <Link
+            to="/games"
+            className="nav-link"
+            activeProps={{ className: 'nav-link is-active' }}
+          >
+            Games
+          </Link>
+          <Link
             to="/learn"
             className="nav-link"
             activeProps={{ className: 'nav-link is-active' }}

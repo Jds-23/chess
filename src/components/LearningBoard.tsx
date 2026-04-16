@@ -17,6 +17,8 @@ interface LearningBoardProps {
   interactive: boolean
   /** Optional key to force board reset */
   resetKey?: number
+  /** Show a green hint arrow for the player's next move */
+  showHintArrow?: boolean
 }
 
 export default function LearningBoard({
@@ -27,6 +29,7 @@ export default function LearningBoard({
   onWrongMove,
   interactive,
   resetKey,
+  showHintArrow = false,
 }: LearningBoardProps) {
   const gameRef = useRef<Chess>(new Chess())
   const [gameVersion, setGameVersion] = useState(0)
@@ -88,6 +91,21 @@ export default function LearningBoard({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSquare, gameVersion, isPlayerTurn])
+
+  // Compute hint arrow for the player's expected move
+  const hintArrow = useMemo(() => {
+    if (!showHintArrow || !isPlayerTurn || moveIndex >= moves.length) return []
+    const game = gameRef.current
+    try {
+      const clone = new Chess(game.fen())
+      const result = clone.move(moves[moveIndex])
+      if (result) {
+        return [{ startSquare: result.from, endSquare: result.to, color: 'rgba(21, 128, 61, 0.7)' }]
+      }
+    } catch { /* invalid move */ }
+    return []
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showHintArrow, isPlayerTurn, moveIndex, moves, gameVersion])
 
   const squareStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {}
@@ -217,6 +235,7 @@ export default function LearningBoard({
           darkSquareStyle: { backgroundColor: '#779952' },
           lightSquareStyle: { backgroundColor: '#edeed1' },
           squareStyles: squareStyles,
+          arrows: hintArrow,
           animationDurationInMs: 200,
         }}
       />

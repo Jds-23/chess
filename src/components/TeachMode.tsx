@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import LearningBoard from './LearningBoard'
-import { Button } from '#/components/ui/button'
+import VariationComplete from './VariationComplete'
 import type { Variation } from '#/data/openings/types'
 
 interface TeachModeProps {
@@ -42,6 +42,17 @@ export default function TeachMode({ variation, playerColor, onComplete }: TeachM
   const showInitialHint =
     moveIndex === 0 && !finished && playerMovesFirst
 
+  // After variation is complete, show the advantage analysis
+  if (finished) {
+    return (
+      <VariationComplete
+        variation={variation}
+        playerColor={playerColor}
+        onContinue={onComplete}
+      />
+    )
+  }
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-2">
@@ -60,7 +71,8 @@ export default function TeachMode({ variation, playerColor, onComplete }: TeachM
         moveIndex={moveIndex}
         onCorrectMove={handleCorrectMove}
         onWrongMove={handleWrongMove}
-        interactive={!finished}
+        interactive
+        showHintArrow
       />
 
       {/* Commentary panel */}
@@ -78,12 +90,6 @@ export default function TeachMode({ variation, playerColor, onComplete }: TeachM
           </p>
         )}
       </div>
-
-      {finished && (
-        <Button onClick={onComplete} size="lg" className="w-full">
-          Continue
-        </Button>
-      )}
     </div>
   )
 }
