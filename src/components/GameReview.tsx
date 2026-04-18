@@ -4,8 +4,11 @@ import type { Arrow } from 'react-chessboard/dist/types'
 import { Button } from '#/components/ui/button'
 import EvalBar from './EvalBar'
 import MoveClassificationBadge from './MoveClassification'
+import MoveMarker from './MoveMarker'
 import { analyzePositionFn } from '#/lib/analyze'
 import { parsePgn, classifyMove, calculateCpLoss } from '#/lib/game-analysis'
+import { isBookPosition } from '#/lib/opening-book'
+import { MARKING_CONFIG } from '#/lib/move-markings'
 import type { ChessComGame, ParsedMove, MoveAnalysis } from '#/lib/chesscom-types'
 import type { AnalysisResult } from '#/lib/analysis-types'
 import { cn } from '#/lib/utils'
@@ -36,14 +39,39 @@ export default function GameReview({ game, username, onBack }: GameReviewProps) 
   // Current move's analysis
   const currentAnalysis = analysisCache.get(currentMoveIndex)
 
-  // Best move arrow
+  const currentMove = currentMoveIndex >= 0 ? moves[currentMoveIndex] : null
+  const currentMoveAnalysis = currentMoveIndex >= 0 ? moveAnalyses.get(currentMoveIndex) ?? null : null
+  const currentClassification = currentMoveAnalysis?.classification ?? null
+  const prevAnalysis = currentMoveIndex >= 0 ? analysisCache.get(currentMoveIndex - 1) : null
+
+  const playedFrom = currentMove ? currentMove.uci.slice(0, 2) : null
+  const playedTo = currentMove ? currentMove.uci.slice(2, 4) : null
+
+  // Arrows: played-move (class color) + engine best (green). Collapse when same.
   const arrows: Arrow[] = []
-  if (currentAnalysis?.bestMove && currentAnalysis.bestMove.length >= 4) {
+  const bestMoveUci = prevAnalysis?.bestMove ?? (currentMoveIndex < 0 ? currentAnalysis?.bestMove : undefined)
+  const playedMatchesBest = !!(currentMove && bestMoveUci && currentMove.uci === bestMoveUci)
+
+  if (currentMove && currentClassification && !playedMatchesBest && playedFrom && playedTo) {
     arrows.push({
-      startSquare: currentAnalysis.bestMove.slice(0, 2),
-      endSquare: currentAnalysis.bestMove.slice(2, 4),
+      startSquare: playedFrom,
+      endSquare: playedTo,
+      color: MARKING_CONFIG[currentClassification].arrowColor,
+    })
+  }
+  if (bestMoveUci && bestMoveUci.length >= 4) {
+    arrows.push({
+      startSquare: bestMoveUci.slice(0, 2),
+      endSquare: bestMoveUci.slice(2, 4),
       color: '#15803d',
     })
+  }
+
+  const squareStyles: Record<string, React.CSSProperties> = {}
+  if (currentClassification && playedFrom && playedTo) {
+    const tint = MARKING_CONFIG[currentClassification].squareTint
+    squareStyles[playedFrom] = { backgroundColor: tint }
+    squareStyles[playedTo] = { backgroundColor: tint }
   }
 
   // Analyze current position
@@ -81,7 +109,19 @@ export default function GameReview({ game, username, onBack }: GameReviewProps) 
     const evalAfter = currentAnalysisResult.eval
     const cpLoss = calculateCpLoss(evalBefore, evalAfter, move.color)
     const isPlayerBestMove = move.uci === prevAnalysis.bestMove
-    const classification = classifyMove(cpLoss, isPlayerBestMove)
+    const playedLeadsToMate = currentAnalysisResult.mate !== null
+      && prevAnalysis.mate !== null
+      && Math.sign(currentAnalysisResult.mate) === Math.sign(prevAnalysis.mate)
+    const classification = classifyMove({
+      cpLoss,
+      isPlayerBestMove,
+      isBookMove: isBookPosition(move.fenBefore),
+      prevMate: prevAnalysis.mate,
+      playedLeadsToMate,
+      color: move.color,
+      fenBefore: move.fenBefore,
+      fenAfter: move.fenAfter,
+    })
 
     setMoveAnalyses(prev => {
       const next = new Map(prev)
@@ -142,8 +182,6 @@ export default function GameReview({ game, username, onBack }: GameReviewProps) 
     active?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
   }, [currentMoveIndex])
 
-  const currentMoveAnalysis = currentMoveIndex >= 0 ? moveAnalyses.get(currentMoveIndex) : null
-
   // Group moves into pairs for display
   const movePairs: Array<{ number: number; white: { idx: number; move: ParsedMove } | null; black: { idx: number; move: ParsedMove } | null }> = []
   for (let i = 0; i < moves.length; i += 2) {
@@ -194,11 +232,19 @@ export default function GameReview({ game, username, onBack }: GameReviewProps) 
                   },
                   darkSquareStyle: { backgroundColor: '#779952' },
                   lightSquareStyle: { backgroundColor: '#edeed1' },
+                  squareStyles,
                   arrows,
                   animationDurationInMs: 150,
                   arePiecesDraggable: false,
                 }}
               />
+              {playedTo && currentClassification && (
+                <MoveMarker
+                  square={playedTo}
+                  classification={currentClassification}
+                  boardOrientation={isWhite ? 'white' : 'black'}
+                />
+              )}
             </div>
           </div>
 

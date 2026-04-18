@@ -35,7 +35,7 @@ export default function EvalBar({ eval: evalScore, mate }: EvalBarProps) {
         style={{ height: `${100 - whitePercent}%` }}
       >
         {!isWhiteAdvantage && (
-          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-bold text-white">
+          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold text-white">
             {label}
           </span>
         )}
@@ -45,7 +45,7 @@ export default function EvalBar({ eval: evalScore, mate }: EvalBarProps) {
         className="relative flex-1 bg-white transition-all duration-500"
       >
         {isWhiteAdvantage && (
-          <span className="absolute top-1 left-1/2 -translate-x-1/2 text-[10px] font-bold text-zinc-800">
+          <span className="absolute top-1 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold text-zinc-800">
             {label}
           </span>
         )}

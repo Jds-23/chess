@@ -34,9 +34,11 @@ export type MoveClassification =
   | 'best'
   | 'excellent'
   | 'good'
+  | 'book'
   | 'inaccuracy'
   | 'mistake'
   | 'blunder'
+  | 'missed-win'
 
 export interface MoveAnalysis {
   move: ParsedMove

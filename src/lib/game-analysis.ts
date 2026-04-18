@@ -32,17 +32,54 @@ export function parsePgn(pgn: string): ParsedMove[] {
   return parsed
 }
 
+const PIECE_VALUES: Record<string, number> = { p: 1, n: 3, b: 3, r: 5, q: 9 }
+
+function materialDiff(fen: string, color: 'w' | 'b'): number {
+  const placement = fen.split(' ')[0]
+  let own = 0
+  let opp = 0
+  for (const ch of placement) {
+    const lower = ch.toLowerCase()
+    const v = PIECE_VALUES[lower]
+    if (v === undefined) continue
+    const isWhite = ch === ch.toUpperCase()
+    if ((isWhite && color === 'w') || (!isWhite && color === 'b')) own += v
+    else opp += v
+  }
+  return own - opp
+}
+
+interface ClassifyArgs {
+  cpLoss: number
+  isPlayerBestMove: boolean
+  isBookMove: boolean
+  prevMate: number | null
+  playedLeadsToMate: boolean
+  color: 'w' | 'b'
+  fenBefore: string
+  fenAfter: string
+}
+
 /**
  * Classify a move based on centipawn loss.
  * evalBefore/evalAfter in centipawns from white's perspective.
  */
-export function classifyMove(
-  cpLoss: number,
-  isPlayerBestMove: boolean,
-): MoveClassification {
-  if (isPlayerBestMove) return 'best'
+export function classifyMove(args: ClassifyArgs): MoveClassification {
+  const { cpLoss, isPlayerBestMove, isBookMove, prevMate, playedLeadsToMate, color, fenBefore, fenAfter } = args
+
+  if (isBookMove) return 'book'
+
+  const favoredWin = prevMate !== null && ((color === 'w' && prevMate > 0) || (color === 'b' && prevMate < 0))
+  if (favoredWin && !playedLeadsToMate) return 'missed-win'
+
+  if (isPlayerBestMove) {
+    const before = materialDiff(fenBefore, color)
+    const after = materialDiff(fenAfter, color)
+    if (after <= before - 3 && after < 0) return 'brilliant'
+    return 'best'
+  }
+
   if (cpLoss <= 10) return 'excellent'
-  if (cpLoss <= 25) return 'good'
   if (cpLoss <= 50) return 'good'
   if (cpLoss <= 100) return 'inaccuracy'
   if (cpLoss <= 200) return 'mistake'
